@@ -1,0 +1,15 @@
+import java.io.*;
+import java.util.*;
+class ReverseOrder
+{
+ public static void main(String args[])
+    {
+    int n=50;
+    int m=10;
+    while(n>=m)
+     {
+       System.out.println(n);
+        n--;
+      }
+   }
+}
