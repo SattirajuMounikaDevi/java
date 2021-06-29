@@ -1,0 +1,19 @@
+import java.util.*;
+class IndividualDigits
+{
+public static void main(String args[])
+{
+Scanner sc=new Scanner(System.in);
+int n;
+n=sc.nextInt();
+while(n>0) 
+{
+int r = n%10; 
+n=n/10; 
+if(n%2==0&&n%2==1)
+System.out.print(r+" "+n);
+}
+}
+}
+
+
