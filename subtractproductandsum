@@ -1,0 +1,21 @@
+class Solution
+{
+    public int subtractProductAndSum(int n)
+    {
+        int sum=0;
+        int a=n;
+        while(a>0)
+        {
+            sum+=a%10;
+            a/=10;
+        }
+        int product=1;
+        a=n;
+        while(a>0)
+        {
+            product*=a%10;
+           a=a/10;
+        }
+        return product-sum;
+    }
+}
