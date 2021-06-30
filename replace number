@@ -1,0 +1,78 @@
+import java.util.*;
+
+class ReplaceNumber
+
+{
+
+    public static int replaceDigit(int n,int x,int y)
+   
+ {
+    
+    int r=0,m=1;
+    
+    while(n/10>0)
+       
+ {
+     
+       int rem=n%10;
+    
+        if(rem==x)
+     
+       {
+    
+            r=r+y*m;
+       
+     }
+       
+     else
+   
+         {
+      
+          r=r+rem*m;
+        
+    }
+
+            m*=10;
+  
+          n=n/10;
+     
+   }
+  
+      if(n==x)
+     
+   {
+    
+        r=r+y*m;
+        
+}
+
+        else
+
+        {
+
+            r=r+n*m;
+     
+   }
+        
+return r;
+
+    }
+
+    public static void main(String args[])
+
+    {
+
+        Scanner sc=new Scanner(System.in);
+   
+     int n=sc.nextInt();
+ 
+       int x=sc.nextInt();
+   
+     int y=sc.nextInt();
+
+        System.out.println(replaceDigit(n,x,y));
+  
+  }
+
+}
+   
