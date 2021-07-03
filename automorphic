@@ -1,0 +1,40 @@
+import java.util.*;
+class Soundarya
+{
+public static void main(String args[])
+{
+int n,i=0;
+Scanner sc=new Scanner(System.in);
+n=sc.nextInt();
+int w=n;
+while(n!=0)
+{
+i++;
+int x=n*n;
+int r=n%10;
+n=n/10;
+if(w==i)
+{
+System.out.println("automorphic");
+}
+else 
+{
+if(w!=i)
+{
+System.out.println("not automorphic");
+}
+}
+}
+}
+}
+
+
+
+
+
+
+
+
+
+
+
