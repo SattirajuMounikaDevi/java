@@ -1,0 +1,19 @@
+import java.util.*;
+class Factorial 
+{
+public static void main(String[] args) 
+{
+Scanner sc=new Scanner(System.in);
+System.out.println("Enter a number to find factorial");
+ int n=sc.nextInt();
+ int factorial = n*fact(n-1);
+System.out.println("Factorial of  given number " +  n + " is " +  factorial);
+}
+static int fact(int n)
+    {
+        if (n >= 1)
+            return n * fact(n - 1);
+       else
+            return 1;
+    }
+}
