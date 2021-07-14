@@ -1,0 +1,30 @@
+import java.util.*;
+class Twins
+{
+static int prime(int n)
+{
+int count=0,i;
+for(i=2;i<=n/2;i++)
+{
+if(n%i==0)
+count=2;
+break;
+}
+return count;
+}
+public static void main(String args[])
+{
+int n,m,i;
+Scanner sc=new Scanner(System.in);
+System.out.println("enter a number");
+n=sc.nextInt();
+System.out.println("enter another number");
+m=sc.nextInt();
+System.out.println("twin numbers are:");
+for(i=2;i<=m/2;i++)
+{
+if(prime(i)==0&&prime(i+2)==0)
+System.out.println(i+" "+(i+2));
+}
+}
+}
