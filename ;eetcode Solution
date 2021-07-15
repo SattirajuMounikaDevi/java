@@ -1,0 +1,29 @@
+class Solution
+ {
+public int compress(char[] chars) 
+{
+int n=chars.length;
+int i=0;
+int count=0;
+ for(i=0;i<n;i++)
+ {
+char ch=chars[i];
+int j=i;
+int flag=0;
+while(j<n && chars[j]==ch)
+{
+j++;
+flag++;               
+ }
+if(flag==1)
+chars[count]=ch;  
+count++;
+}
+pblic static void main(String args[])
+{
+Scanner sc=new Scanner(System.in);
+char chars=sc.nextChar().charAt(0);
+compress(char[] ch);
+        }
+}
+}
