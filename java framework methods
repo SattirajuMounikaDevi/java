@@ -1,0 +1,37 @@
+import java.util.*;
+class Frame
+{
+public static void main(String args[])
+{
+Scanner sc=new Scanner(System.in);
+ArrayList<Integer>a1=new ArrayList<Integer>();
+ArrayList<Integer>a2=new ArrayList<Integer>();
+a1.add(sc.nextInt());
+a1.add(sc.nextInt());
+a1.add(sc.nextInt());
+a1.add(sc.nextInt());
+a2.add(sc.nextInt());
+a2.add(sc.nextInt());
+a2.add(sc.nextInt());
+a2.add(sc.nextInt());
+a1.addAll(a2);
+Collections.sort(a1);
+System.out.print(a1);
+}
+}
+----------------------------------------------------------------------------
+import java.util.*;
+class Frame
+{
+public static void main(String args[])
+{
+Scanner sc=new Scanner(System.in);
+ArrayList<Integer>a1=new ArrayList<Integer>();
+ArrayList<Integer>a2=new ArrayList<Integer>();
+a1.add(sc.nextInt());
+a2.add(sc.nextInt());
+a1.addAll(a2);
+Collections.sort(a1);
+System.out.print(a1);
+}
+}
