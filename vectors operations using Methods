@@ -1,0 +1,37 @@
+import java.util.*;
+class Method
+{
+public static void main(String args[])
+{
+Vector s;
+s=new Vector();
+Scanner sc=new Scanner(System.in);
+System.out.println("Enter number of elements");
+int n=sc.nextInt();
+for(int i=0;i<n;i++)
+{
+s.add(sc.next());
+}
+System.out.println(s);
+System.out.println("Enter index that has to be deleted");
+int index=sc.nextInt();
+s.remove(index);
+System.out.println(s+" ");
+System.out.println("Enter the element that has to be replaced");
+int ind=sc.nextInt();
+float value=sc.nextFloat();
+s.set(ind,value);
+System.out.println(s);
+System.out.println("Enter the string that has to be searched");
+String ms=sc.next();
+s.indexOf(ms);
+if(s.contains(ms))
+{
+System.out.println("Found\n"+s);
+}
+else
+{
+System.out.println("False");
+}
+}
+}
