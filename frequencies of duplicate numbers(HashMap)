@@ -1,0 +1,28 @@
+import java.util.*;
+class Duplicates
+{
+public static void main(String args[])
+{
+Scanner sc=new Scanner(System.in);
+System.out.println("Enter number of elements");
+int m=sc.nextInt();
+HashMap<Integer,Integer> u=new HashMap<Integer,Integer>();
+int a[]=new int[m];
+int n=a.length;
+System.out.println("Enter elements into the array");
+for(int i=0;i<n;i++)
+{
+a[i]=sc.nextInt();
+}
+for(int i=0;i<n;i++)
+{
+if(u.containsKey(a[i]))
+u.put(a[i],u.get(a[i])+1);
+else
+u.put(a[i],1);
+}
+for (Map.Entry<Integer,Integer> j: u.entrySet())
+if (j.getValue() > 1)
+System.out.println(j.getKey()+ "="+j.getValue());
+}
+}
