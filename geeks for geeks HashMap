@@ -1,0 +1,17 @@
+https://practice.geeksforgeeks.org/problems/java-hashmap1033/1
+
+
+
+class Solution{
+    static int map(int n, String keys[], int arr[], String s)
+    {
+        HashMap<String,Integer> m=new HashMap<String,Integer>();
+        for(int i=0;i<n;i++)
+        m.put(keys[i],arr[i]);
+        if(m.containsKey(s))
+            return m.get(s);
+        else
+            return (-1);
+            
+    }
+}
