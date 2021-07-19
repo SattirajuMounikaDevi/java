@@ -1,0 +1,23 @@
+import java.util.*;
+class Data
+{
+public static void main(String args[])
+{
+Scanner sc=new Scanner(System.in);
+HashMap<Integer,String> k=new HashMap<Integer,String>();
+int key;
+String value;
+System.out.println("Enter n value");
+int n=sc.nextInt();
+System.out.println("Enter key and value");
+for(int i=0;i<n;i++)
+{
+key=sc.nextInt();
+value=sc.next();
+k.put(key,value);
+}
+System.out.println("Unsorted order is:"+k);
+TreeMap<Integer,String> p=new TreeMap<Integer,String>(k);
+System.out.println("Sorted order is:"+p);
+}
+}
