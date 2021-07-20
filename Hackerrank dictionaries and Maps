@@ -1,0 +1,31 @@
+//Complete this code or write your own from scratch
+import java.util.*;
+import java.io.*;
+
+class Solution{
+    public static void main(String []args){
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        HashMap<String,Integer> Q=new HashMap<String,Integer>();
+        for(int i = 0; i < n; i++){
+            String name = in.next();
+            int phone = in.nextInt();
+            Q.put(name,phone);
+        }
+        try
+        {
+        for(int j=0;j<n;j++)
+        {
+            String s = in.next();
+            if(Q.containsKey(s))
+            System.out.println(s+"="+Q.get(s));
+            else
+            System.out.println("Not found");
+        }
+        }
+        catch(Exception e)
+        {
+        }
+        in.close();
+    }
+}
