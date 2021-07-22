@@ -1,0 +1,33 @@
+import java.util.*;
+class Tables
+{
+public static void main(String args[])
+{
+Scanner sc=new Scanner(System.in);
+System.out.println("Enter number of elements");
+int n=sc.nextInt();
+Hashtable<Integer,Integer> x=new Hashtable<Integer,Integer>();
+System.out.println("Enter key and salary");
+for(int i=0;i<n;i++)
+{
+int key=sc.nextInt();
+int salary=sc.nextInt();
+x.put(key,salary);
+}
+TreeMap<Integer,Integer> m=new TreeMap<Integer,Integer>(x);
+System.out.print(m);
+System.out.println("\n Enter key value");
+int k=sc.nextInt();
+if(m.containsKey(k))
+{
+int p=x.get(k);
+p=p+5000;
+m.put(k,p);
+System.out.println(m);
+}
+else
+{
+System.out.println("not found");
+}
+}
+}
