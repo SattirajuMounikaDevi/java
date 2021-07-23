@@ -1,0 +1,19 @@
+import java.util.*;
+class Maxi_Min
+{
+public static void main(String args[])
+{
+Scanner sc=new Scanner(System.in);
+System.out.println("Enter number of elements");
+int n =sc.nextInt();
+Stack<Integer> p=new Stack<Integer>();
+System.out.println("Enter elements to push into the stack");
+for(int i=0;i<n;i++)
+{
+p.push(sc.nextInt());
+}
+System.out.println("Elements in the stack are:"+p);
+System.out.println("\n Maximum Element:"+Collections.max(p));
+System.out.println("\n Minimum Element:"+Collections.min(p));
+}
+}
