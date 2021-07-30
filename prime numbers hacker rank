@@ -1,0 +1,30 @@
+import java.util.*;
+class Solution
+{
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        int n=1000000;
+        int prime[]=new int[n+1];
+        int i;
+        for(i=0;i<=n;i++)
+        {
+            prime[i]=1;
+         }
+        prime[1]=0;
+        for(int p=2;p*p<=n;p++)
+        {
+            if(prime[p]==1)
+                for(i=p*p;i<=n;i=i+p)
+                {
+                 if(prime[i]==1)
+                     prime[i]=0;
+                }
+        }
+        int m=sc.nextInt();
+        if(prime[m]==1)
+            System.out.println("yes");
+        else
+            System.out.println("no");
+    }
+}
