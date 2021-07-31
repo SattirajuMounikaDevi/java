@@ -1,0 +1,52 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution 
+{
+    public static void main(String[] args) 
+    { 
+        Stack<Integer> m=new Stack<Integer>();
+        Stack<Integer> s=new Stack<Integer>();
+        Scanner sc=new Scanner(System.in);
+        int q=sc.nextInt();
+        try
+        {
+        while(q>0)
+        {
+            int type=sc.nextInt();
+            switch(type)
+            {
+                
+                case 1:int x=sc.nextInt();
+                         m.push(x);
+                           break;
+                case 2:if(s.empty())
+                       {
+                        while(!m.empty())
+                         {
+                          s.push(m.pop());
+                         } 
+                       } 
+                          s.pop();      
+                            break;
+                case 3:if(s.empty())
+                       {
+                        while(!m.empty())
+                         {
+                          s.push(m.pop());
+                         } 
+                       } 
+                System.out.println(s.peek());
+                            break;
+            }
+        }
+        }
+        catch(Exception e)
+        {
+            
+        }
+        }
+}
