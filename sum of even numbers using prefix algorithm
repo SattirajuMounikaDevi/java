@@ -1,0 +1,22 @@
+import java.util.*;
+class Sum_Of_Even
+{
+public static void main(String args[])
+{
+Scanner sc=new Scanner(System.in);
+int q=sc.nextInt();
+int n=1000;
+int[]  p=new int[n];
+p[0]=0;
+for(int i=1;i<n;i++)
+{
+p[i]=p[i-1]+2*i;
+}
+for(int i=0;i<q;i++)
+{
+int sum=sc.nextInt();
+System.out.println(p[sum]);
+}
+}
+}
+  
