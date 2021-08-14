@@ -1,0 +1,26 @@
+import java.util.*;
+public class Main
+{
+   static int palindrome(int n, int res)
+   {
+      if(n == 0)
+         return res;
+      res= (res * 10) + (n % 10);
+      return palindrome(n / 10, res);
+   }
+   public static void main(String[] args)
+   {
+       Scanner sc=new Scanner(System.in);
+       System.out.println("Enter a number to check if it's palindrome or not");
+      int n=sc.nextInt();
+      int res = palindrome(n, 0);
+      if(res == n)
+      {
+         System.out.println("Given Number Is palindrome");
+      }
+      else
+      {
+         System.out.println("Given Number Is Not Palindrome");
+      }
+   }
+}
