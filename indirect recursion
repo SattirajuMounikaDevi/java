@@ -1,0 +1,35 @@
+class Indirect_Recursion
+{
+static final int N=50;
+static int n=5;
+static void multiple1()
+{
+if(n<=N)
+{
+System.out.printf(" %d ",n);
+n=n+5;
+multiple2();
+}
+else
+{
+return;
+}
+}
+public static void multiple2()
+{
+if(n<=N)
+{
+System.out.printf(" %d ",n);
+n=n+5;
+multiple1();
+}
+else
+{
+return;
+}
+}
+public static void main(String args[])
+{
+multiple1();
+}
+}
